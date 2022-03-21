@@ -1,0 +1,81 @@
+
+/* Start Global Rules */
+*, *::before, *::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, aqua, beige);
+}
+/* End Global Rules */
+/* Start Calaculator Box Section */
+.calculator {
+    display:grid;
+    justify-content: center;
+    align-items:center;
+    align-content: start;
+    min-height: 100vh;
+}
+/* End Calaculator Box Section */
+/* Start Buttons Box Section */
+.calculator .buttons-box {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    gap: 5px;
+}
+.calculator .buttons-box button {
+    cursor: pointer;
+    font-size: 2.5em;
+    outline: none;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    background-color: #666;
+    color: #fff;
+}
+.calculator .buttons-box button:hover {
+    background-color: #ccc;
+    color: rgb(0, 0, 0);
+}
+.calculator .buttons-box .two-cells {
+    grid-column: span 2;
+}
+/* End Buttons Box Section */
+/* Start Screen Box Section */
+.calculator .screen-box {
+    min-height: 120px;
+    background-color: #333;
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border: 5px solid darkorange;
+    border-radius: 15px;
+}
+.calculator .screen-box .previous-operand {
+    color: #ccc;
+    font-size: 1.5rem;
+}
+.calculator .screen-box .current-operand {
+    color: #fff;
+    font-size: 2.5rem;
+}
+/* End Screen Box Section */
+/* Start Footer Section */
+.calculator .footer{
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    margin: 5px auto;
+}
+/* End Footer Section */
